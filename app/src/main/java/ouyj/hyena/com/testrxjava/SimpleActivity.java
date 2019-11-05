@@ -22,18 +22,51 @@ public class SimpleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simple);
 
         //查找按钮引用并设置事件
-        Button btn = findViewById(R.id.btn_test);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btnJust = findViewById(R.id.btn_just);
+        btnJust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Log.d(TAG, "onClick！");
-
                 //创建被观察者并自动调用onNext发射数据,发射完自动onComplete
                 Observable.just("Cricket", "Football")
                         //被观察者在线程中执行操作
                         .subscribeOn(Schedulers.io())
                         //观察者在UI主线程执行
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(getObserver());
+            }
+        });
+        Button btnFrom = findViewById(R.id.btn_from);
+        btnFrom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+        Button btnInterval = findViewById(R.id.btn_interval);
+        btnInterval.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+        Button btnRange = findViewById(R.id.btn_range);
+        btnRange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+        Button btnTimer = findViewById(R.id.btn_timer);
+        btnTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        Button btnRepeat = findViewById(R.id.btn_repeat);
+        btnRepeat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //重复指定次数（发射数据）
+                Observable.just("Cricket", "Football").repeat(2)
+                        .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(getObserver());
             }

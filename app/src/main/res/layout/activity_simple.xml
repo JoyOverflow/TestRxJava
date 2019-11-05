@@ -12,11 +12,39 @@
     tools:context=".SimpleActivity">
 
     <Button
-        android:id="@+id/btn_test"
+        android:id="@+id/btn_just"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test"
-        android:textAllCaps="false"
+        android:text="Just"
         android:textColor="@android:color/black" />
-
+    <Button
+        android:id="@+id/btn_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btn_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interval"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btn_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Range"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btn_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Timer"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btn_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textColor="@android:color/black" />
 </LinearLayout>

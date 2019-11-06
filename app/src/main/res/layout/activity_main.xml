@@ -17,16 +17,16 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onTestClick"
-        android:text="@string/btn_test1"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="onTest2Click"
         android:text="@string/btn_test2"
         android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="observerClick"
+        android:text="@string/simple_observer"
+        android:textColor="@android:color/black"/>
+
 
 </LinearLayout>
 </ScrollView>

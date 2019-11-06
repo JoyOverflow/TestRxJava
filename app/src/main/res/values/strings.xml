@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TestRxJava</string>
-    <string name="btn_test1">测试一下</string>
+    <string name="simple_observer">简化观察者</string>
     <string name="btn_test2">简化被观察者</string>
 </resources>

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -16,12 +18,46 @@ public class SimpleActivity extends AppCompatActivity {
 
     private static final String TAG = SimpleActivity.class.getSimpleName();
 
+
+    /**
+     * (1)创建被观察者（当被订阅时，subscribe方法会自动调用，其内事件会依次触发）
+     * @return
+     */
+    private Observable<String> getObservable() {
+        //创建一个被观察者
+        Observable<String> myObservable  = Observable.create(new ObservableOnSubscribe<String>() {
+            //
+            @Override
+            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                //发射数据
+                emitter.onNext("hello");
+                emitter.onNext("ouyang");
+                emitter.onNext("jun");
+                //发射完成事件（触发Observer的onCompleted方法）
+                emitter.onComplete();
+            }
+        });
+        return myObservable;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple);
 
-        //查找按钮引用并设置事件
+
+        //常规方式创建Observable
+        Button btnCreate = findViewById(R.id.btn_create);
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //(3)将Observable与Subscriber关联起来（发生订阅）
+                getObservable()
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(getObserver());//订阅
+            }
+        });
+        //快捷方式创建Observable
         Button btnJust = findViewById(R.id.btn_just);
         btnJust.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +71,9 @@ public class SimpleActivity extends AppCompatActivity {
                         .subscribe(getObserver());
             }
         });
+
+
+
         Button btnFrom = findViewById(R.id.btn_from);
         btnFrom.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +113,7 @@ public class SimpleActivity extends AppCompatActivity {
     }
 
     /**
-     * 创建观察者（用来接收被观察者发射的数据和事件）
+     * (2)创建观察者（用来接收被观察者发射的数据和事件）
      * @return
      */
     private Observer<String> getObserver() {

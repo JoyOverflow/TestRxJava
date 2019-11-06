@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void onTest2Click(View view) {
+    public void observableClick(View view) {
         startActivity(
-                new Intent(MainActivity.this, SimpleActivity.class)
+                new Intent(MainActivity.this, ObservableActivity.class)
         );
     }
     public void observerClick(View view) {

@@ -14,9 +14,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class SimpleActivity extends AppCompatActivity {
+public class ObservableActivity extends AppCompatActivity {
 
-    private static final String TAG = SimpleActivity.class.getSimpleName();
+    private static final String TAG = ObservableActivity.class.getSimpleName();
 
 
     /**
@@ -42,7 +42,7 @@ public class SimpleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple);
+        setContentView(R.layout.activity_observable);
 
 
         //常规方式创建Observable

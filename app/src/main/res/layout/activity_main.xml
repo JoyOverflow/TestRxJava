@@ -17,8 +17,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onTest2Click"
-        android:text="@string/btn_test2"
+        android:onClick="observableClick"
+        android:text="@string/simple_observable"
         android:textColor="@android:color/black"/>
     <Button
         android:layout_width="match_parent"

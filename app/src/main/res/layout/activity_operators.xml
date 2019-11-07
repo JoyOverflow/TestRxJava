@@ -9,35 +9,35 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context=".ObserverActivity">
+    tools:context=".OperatorsActivity">
     <Button
-        android:id="@+id/btn_action"
+        android:id="@+id/btn_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_action"
+        android:text="@string/btn_map"
         android:textColor="@android:color/black" />
     <Button
-        android:id="@+id/btn_consumer"
+        android:id="@+id/btn_concat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_consumer"
+        android:text="@string/btn_concat"
         android:textColor="@android:color/black" />
     <Button
-        android:id="@+id/btn_bi_consumer"
+        android:id="@+id/btn_flatmap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_bi_consumer"
+        android:text="@string/btn_flatmap"
         android:textColor="@android:color/black" />
     <Button
-        android:id="@+id/btn_function"
+        android:id="@+id/btn_zip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_function"
+        android:text="@string/btn_zip"
         android:textColor="@android:color/black" />
     <Button
-        android:id="@+id/btn_bi_Funcation"
+        android:id="@+id/btn_interval"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_bi_Funcation"
+        android:text="@string/btn_interval"
         android:textColor="@android:color/black" />
 </LinearLayout>

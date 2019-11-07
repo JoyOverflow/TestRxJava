@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".ObserverActivity">
         </activity>
+        <activity android:name=".OperatorsActivity">
+        </activity>
+        <activity android:name=".FlowableActivity">
+        </activity>
     </application>
 
 </manifest>

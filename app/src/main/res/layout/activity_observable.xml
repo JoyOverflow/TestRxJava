@@ -11,6 +11,7 @@
     android:orientation="vertical"
     tools:context=".ObservableActivity">
 
+    <!--create、just、defer、from都是‘被观察者’的创建操作符-->
     <Button
         android:id="@+id/btn_create"
         android:layout_width="match_parent"
@@ -22,6 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Just"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btn_defer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Defer"
         android:textColor="@android:color/black" />
     <Button
         android:id="@+id/btn_from"

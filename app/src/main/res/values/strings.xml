@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">TestRxJava</string>
     <string name="simple_observable">创建被观察者</string>
-
     <string name="simple_observer">简化观察/消费者</string>
+    <string name="simple_operators">常用操作符</string>
+
+
+
+
+
     <string name="btn_action">Consumer和Action</string>
     <string name="btn_consumer">Action1改成Consumer</string>
     <string name="btn_bi_consumer">Action2改成BiConsumer</string>
@@ -10,10 +15,10 @@
     <string name="btn_bi_Funcation">Func2改称BiFuncation</string>
 
 
-    <string name="btn_map">将被观察者映射成另一个</string>
-    <string name="btn_concat">依次序合并多个被观察者</string>
+    <string name="btn_map">被观察者数据通过函数进行映射</string>
     <string name="btn_flatmap">flatmap</string>
+
+    <string name="btn_concat">依次序合并多个被观察者</string>
     <string name="btn_zip">将多个被观察者的数据合并再发射</string>
     <string name="btn_interval">实现心跳任务</string>
-
 </resources>
